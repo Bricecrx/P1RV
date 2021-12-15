@@ -1,0 +1,46 @@
+﻿  math_3d.cpp
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(30,22): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(30,1): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'GetLastErrorAsHResult'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(35,26): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(34,1): error C2086: 'int HRESULT' : redéfinition
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(29): message : voir la déclaration de 'HRESULT'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(35,1): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'GetRelationshipTargetPart'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(43,22): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(42,1): error C2086: 'int HRESULT' : redéfinition
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(29): message : voir la déclaration de 'HRESULT'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(43,1): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'GetRelationshipByType'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(50,16): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(49,1): error C2086: 'int HRESULT' : redéfinition
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(29): message : voir la déclaration de 'HRESULT'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(50,1): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'GetFullFileName'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(57,28): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(56,1): error C2086: 'int HRESULT' : redéfinition
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(29): message : voir la déclaration de 'HRESULT'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(57,1): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'CreateDirectoryFromPartName'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(64,23): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(63,1): error C2086: 'int HRESULT' : redéfinition
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(29): message : voir la déclaration de 'HRESULT'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(64,1): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'WriteFileContentToPart'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(72,21): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(71,1): error C2086: 'int HRESULT' : redéfinition
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(29): message : voir la déclaration de 'HRESULT'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(72,1): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'DisplayStreamContent'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(78,23): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(77,1): error C2086: 'int HRESULT' : redéfinition
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(29): message : voir la déclaration de 'HRESULT'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\util.h(78,1): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'WritePartContentToFile'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\math_3d.cpp(42,37): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\math_3d.cpp(43,37): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\math_3d.cpp(73,21): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\math_3d.cpp(73,19): warning C4244: 'initialisation' : conversion de 'double' en 'const float', perte possible de données
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\math_3d.cpp(74,21): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\math_3d.cpp(74,19): warning C4244: 'initialisation' : conversion de 'double' en 'const float', perte possible de données
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\math_3d.cpp(75,21): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\math_3d.cpp(75,19): warning C4244: 'initialisation' : conversion de 'double' en 'const float', perte possible de données
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\math_3d.cpp(123,35): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+  Tuto OpenGL MODERNE.cpp
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE.cpp(107,8): error C2660: 'ReadFile' : la fonction ne prend pas 2 arguments
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\fileapi.h(1013,1): message : voir la déclaration de 'ReadFile'
+C:\Users\BRICE\source\repos\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE\Tuto OpenGL MODERNE.cpp(113,8): error C2660: 'ReadFile' : la fonction ne prend pas 2 arguments
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\fileapi.h(1013,1): message : voir la déclaration de 'ReadFile'
+  Génération de code en cours...
