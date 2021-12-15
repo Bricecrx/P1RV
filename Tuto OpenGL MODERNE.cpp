@@ -22,8 +22,8 @@
 
 #include"mainIncludes.h"
 
-#define WINDOW_WIDTH  2560
-#define WINDOW_HEIGHT 1440
+#define WINDOW_WIDTH  1777
+#define WINDOW_HEIGHT 1000
 
 bool FS = false;
 
@@ -100,7 +100,7 @@ bool Tutorial18::Init()
 
     pMesh = new BasicMesh();
 
-    if (!pMesh->LoadMesh("wine_barrel_01_4k.obj")) {
+    if (!pMesh->LoadMesh("marble_bust_01_4k.obj")) {
         return false;
     }
 
@@ -149,6 +149,7 @@ void Tutorial18::RenderSceneCB()
     pLightingTech->SetDirectionalLight(dirLight);
     pLightingTech->SetMaterial(pMesh->GetMaterial());
 
+
     //Dans les lignes suivantes, on récupère la position locale de la caméra pour 
     //pouvoir l'utiliser dans notre implémentation de l'éclairage spéculaire 
 
@@ -162,7 +163,7 @@ void Tutorial18::RenderSceneCB()
 
     Vector4f CameraLocalPos = CameraToLocalTransformation * CameraWorldPos;
 
-    Vector3f CameraLocalPos3f= CameraLocalPos.to3f();
+    Vector3f CameraLocalPos3f = CameraLocalPos.to3f();
 
     pLightingTech->SetCameraLocalPos(CameraLocalPos3f);
 

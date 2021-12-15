@@ -16,6 +16,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+//Donne les indices et les int pour les différentes textures qu'on utilisera
+
 #ifndef OGLDEV_ENGINE_COMMON_H
 #define OGLDEV_ENGINE_COMMON_H
 

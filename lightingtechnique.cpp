@@ -101,7 +101,7 @@ void LightingTechnique::SetCameraLocalPos(const Vector3f& CameraLocalPos) {
 
 void LightingTechnique::SetMaterial(const Material& material)
 {
-    glUniform3f(materialLoc.AmbientColor, material.AmbientColor.x, material.AmbientColor.y, material.AmbientColor.z);
-    glUniform3f(materialLoc.DiffuseColor, material.DiffuseColor.x, material.DiffuseColor.y, material.DiffuseColor.z);
-    glUniform3f(materialLoc.SpecularColor, material.SpecularColor.x, material.SpecularColor.y, material.SpecularColor.z);
+    glUniform3f(materialLoc.AmbientColor, material.AmbientColor.r, material.AmbientColor.g, material.AmbientColor.b);
+    glUniform3f(materialLoc.DiffuseColor, material.DiffuseColor.r, material.DiffuseColor.g, material.DiffuseColor.b);
+    glUniform3f(materialLoc.SpecularColor, material.SpecularColor.r, material.SpecularColor.g, material.SpecularColor.b);
 }

@@ -12,7 +12,7 @@
 #include "world_transform.h"
 #include "camera.h"
 
-static int MARGIN = 10;
+static int MARGIN = 20;
 static float EDGE_STEP = 1.0f;
 
 Camera::Camera(int WindowWidth, int WindowHeight) {

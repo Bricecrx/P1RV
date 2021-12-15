@@ -276,27 +276,27 @@ void BasicMesh::LoadColors(const aiMaterial* pMaterial, int index)
 
     if (pMaterial->Get(AI_MATKEY_COLOR_AMBIENT, AmbientColor) == AI_SUCCESS) {
         printf("Loaded ambient color [%f %f %f]\n", AmbientColor.r, AmbientColor.g, AmbientColor.b);
-        m_Materials[index].AmbientColor.x = AmbientColor.r;
-        m_Materials[index].AmbientColor.y = AmbientColor.g;
-        m_Materials[index].AmbientColor.z = AmbientColor.b;
+        m_Materials[index].AmbientColor.r = AmbientColor.r;
+        m_Materials[index].AmbientColor.g = AmbientColor.g;
+        m_Materials[index].AmbientColor.b = AmbientColor.b;
     }
 
     aiColor3D DiffuseColor(0.0f, 0.0f, 0.0f);
 
     if (pMaterial->Get(AI_MATKEY_COLOR_DIFFUSE, DiffuseColor) == AI_SUCCESS) {
         printf("Loaded diffuse color [%f %f %f]\n", DiffuseColor.r, DiffuseColor.g, DiffuseColor.b);
-        m_Materials[index].DiffuseColor.x = DiffuseColor.r;
-        m_Materials[index].DiffuseColor.y = DiffuseColor.g;
-        m_Materials[index].DiffuseColor.z = DiffuseColor.b;
+        m_Materials[index].DiffuseColor.r = DiffuseColor.r;
+        m_Materials[index].DiffuseColor.g = DiffuseColor.g;
+        m_Materials[index].DiffuseColor.b = DiffuseColor.b;
     }
 
     aiColor3D SpecularColor(0.0f, 0.0f, 0.0f);
 
     if (pMaterial->Get(AI_MATKEY_COLOR_SPECULAR, SpecularColor) == AI_SUCCESS) {
         printf("Loaded specular color [%f %f %f]\n", SpecularColor.r, SpecularColor.g, SpecularColor.b);
-        m_Materials[index].SpecularColor.x = SpecularColor.r;
-        m_Materials[index].SpecularColor.y = SpecularColor.g;
-        m_Materials[index].SpecularColor.z = SpecularColor.b;
+        m_Materials[index].SpecularColor.r = SpecularColor.r;
+        m_Materials[index].SpecularColor.g = SpecularColor.g;
+        m_Materials[index].SpecularColor.b = SpecularColor.b;
     }
 }
 
@@ -393,7 +393,7 @@ void BasicMesh::Render(unsigned int NumInstances, const Matrix4f* WVPMats, const
 const Material& BasicMesh::GetMaterial()
 {
     for (unsigned int i = 0; i < m_Materials.size(); i++) {
-        if (m_Materials[i].AmbientColor != Vector3f(0.0f, 0.0f, 0.0f)) {
+        if (m_Materials[i].AmbientColor != aiColor3D(0.0f, 0.0f, 0.0f)) {
             return m_Materials[i];
         }
     }
