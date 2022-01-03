@@ -23,6 +23,8 @@
 #include "basicmesh.h"
 #include <iostream>
 #include "enginecommon.h"
+#include "skybox.h"
+#include "skyboxtechnique.h"
 
 using namespace std;
 

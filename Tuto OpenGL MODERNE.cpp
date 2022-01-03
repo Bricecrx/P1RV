@@ -22,8 +22,8 @@
 
 #include"mainIncludes.h"
 
-#define WINDOW_WIDTH  1777
-#define WINDOW_HEIGHT 1000
+#define WINDOW_WIDTH  1000
+#define WINDOW_HEIGHT 777
 
 bool FS = false;
 
@@ -46,16 +46,25 @@ private:
 
     GLuint WVPLocation;
     GLuint SamplerLocation;
-    Camera* pGameCamera = NULL;
-    BasicMesh* pMesh = NULL;
+    Camera* pGameCamera;
+    BasicMesh* pMesh;
     Matrix4f projection;
-    LightingTechnique* pLightingTech = NULL;
+    LightingTechnique* pLightingTech;
     DirectionalLight dirLight;
+    float m_scale;
+    SkyBox* m_pSkyBox;
+    PersProjInfo m_persProjInfo;
 };
 
 
 Tutorial18::Tutorial18()
 {
+    pLightingTech = NULL;
+    pGameCamera = NULL;
+    pMesh = NULL;
+    m_scale = 0.0f;
+    m_pSkyBox = NULL;
+    
     GLclampf Red = 0.0f, Green = 0.0f, Blue = 0.0f, Alpha = 0.0f;
     glClearColor(Red, Green, Blue, Alpha);
 
@@ -69,9 +78,15 @@ Tutorial18::Tutorial18()
     float zNear = 1.0f;
     float zFar = 100.0f;
 
+    m_persProjInfo.FOV = FOV;
+    m_persProjInfo.Height = WINDOW_HEIGHT;
+    m_persProjInfo.Width = WINDOW_WIDTH;
+    m_persProjInfo.zNear = zNear;
+    m_persProjInfo.zFar = zFar;
+
     projection.InitPersProjTransform(FOV, WINDOW_WIDTH, WINDOW_HEIGHT, zNear, zFar);
 
-    dirLight.AmbientIntensity = 0.1f;
+    dirLight.AmbientIntensity = 0.2f;
     dirLight.DiffuseIntensity = 1.0f;
     dirLight.WorldDirection = Vector3f(1.0f, 0.0f, 0.0f);
 
@@ -82,6 +97,14 @@ Tutorial18::~Tutorial18()
 {
     if (pGameCamera) {
         delete pGameCamera;
+    }
+
+    if (pLightingTech) {
+        delete pLightingTech;
+    }
+
+    if (m_pSkyBox) {
+        delete m_pSkyBox;
     }
 
     if (pMesh) {
@@ -111,9 +134,20 @@ bool Tutorial18::Init()
     }
 
     pLightingTech->Enable();
-
     pLightingTech->SetTextureUnit(COLOR_TEXTURE_UNIT_INDEX); //argument défini dans enginecommon.h
     pLightingTech->SetSpecularExponentTextureUnit(SPECULAR_EXPONENT_UNIT_INDEX); //idem
+
+    m_pSkyBox = new SkyBox(pGameCamera, m_persProjInfo);
+
+    if (!m_pSkyBox->Init(".",
+        "skybox/sp3right.jpg",
+        "skybox/sp3left.jpg",
+        "skybox/sp3top.jpg",
+        "skybox/sp3bot.jpg",
+        "skybox/sp3front.jpg",
+        "skybox/sp3back.jpg")) {
+        return false;
+    }
 
     return true;
 }
@@ -168,6 +202,8 @@ void Tutorial18::RenderSceneCB()
     pLightingTech->SetCameraLocalPos(CameraLocalPos3f);
 
     pMesh->Render();
+
+    m_pSkyBox->Render();
 
     glutPostRedisplay();
 

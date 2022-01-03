@@ -13,7 +13,7 @@
 #include "util.h"
 #include <time.h>
 #include "vertex.h"
-#include "pipeline.h"
+//#include "pipeline.h"
 #include "world_transform.h"
 
 class Camera {

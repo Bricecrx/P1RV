@@ -119,13 +119,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Dev\glew-2.1.0\include\GL;C:\Dev\freeglut\include\GL;C:\Dev\assimp-5.0.1\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\glew-2.1.0\include\GL;C:\Dev\freeglut\include\GL;C:\Dev\assimp-5.0.1\include;C:\Dev\ImageMagick-7.1.0-Q16-HDRI\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Dev\glew-2.1.0\lib\Release\x64;C:\Dev\freeglut\lib\x64;C:\Dev\assimp-5.0.1\lib\Release</AdditionalLibraryDirectories>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;glew32.lib;freeglut.lib;assimp-vc142-mt.lib;IrrXML.lib;zlib.lib;zlibstatic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Dev\glew-2.1.0\lib\Release\x64;C:\Dev\freeglut\lib\x64;C:\Dev\assimp-5.0.1\lib\Release;C:\Dev\ImageMagick-7.1.0-Q16-HDRI\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;glew32.lib;freeglut.lib;assimp-vc142-mt.lib;IrrXML.lib;zlib.lib;zlibstatic.lib;CORE_RL_Magick++_.lib;CORE_RL_MagickCore_.lib;CORE_RL_MagickWand_.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,9 +147,12 @@
   <ItemGroup>
     <ClCompile Include="basicmesh.cpp" />
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="cubemap_texture.cpp" />
     <ClCompile Include="lightingtechnique.cpp" />
     <ClCompile Include="math_3d.cpp" />
     <ClCompile Include="pipeline.cpp" />
+    <ClCompile Include="skybox.cpp" />
+    <ClCompile Include="skyboxtechnique.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="technique.cpp" />
     <ClCompile Include="texture.cpp" />
@@ -160,12 +163,15 @@
   <ItemGroup>
     <ClInclude Include="basicmesh.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="cubemap_texture.h" />
     <ClInclude Include="enginecommon.h" />
     <ClInclude Include="lightingtechnique.h" />
     <ClInclude Include="mainIncludes.h" />
     <ClInclude Include="material.h" />
     <ClInclude Include="math_3d.h" />
     <ClInclude Include="pipeline.h" />
+    <ClInclude Include="skybox.h" />
+    <ClInclude Include="skyboxtechnique.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="technique.h" />
     <ClInclude Include="texture.h" />
@@ -183,6 +189,8 @@
     <None Include="shader2.vs" />
     <None Include="shader3.fs" />
     <None Include="shader3.vs" />
+    <None Include="skybox.fs" />
+    <None Include="skybox.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

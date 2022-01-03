@@ -290,6 +290,33 @@ Quaternion operator*(const Quaternion& q, const Vector3f& v)
     return ret;
 }
 
+void Matrix4f::InitOrthoProjTransform(const OrthoProjInfo& p)
+{
+    float l = p.l;
+    float r = p.r;
+    float b = p.b;
+    float t = p.t;
+    float n = p.n;
+    float f = p.f;
+
+    m[0][0] = 2.0f / (r - l); m[0][1] = 0.0f;         m[0][2] = 0.0f;         m[0][3] = -(r + l) / (r - l);
+    m[1][0] = 0.0f;         m[1][1] = 2.0f / (t - b); m[1][2] = 0.0f;         m[1][3] = -(t + b) / (t - b);
+    m[2][0] = 0.0f;         m[2][1] = 0.0f;         m[2][2] = 2.0f / (f - n); m[2][3] = -(f + n) / (f - n);
+    m[3][0] = 0.0f;         m[3][1] = 0.0f;         m[3][2] = 0.0f;         m[3][3] = 1.0;
+}
+
+void Matrix4f::InitPersProjTransform(const PersProjInfo& p)
+{
+    const float ar = p.Width / p.Height;
+    const float zRange = p.zNear - p.zFar;
+    const float tanHalfFOV = tanf(ToRadian(p.FOV / 2.0f));
+
+    m[0][0] = 1.0f / (tanHalfFOV * ar); m[0][1] = 0.0f;            m[0][2] = 0.0f;                        m[0][3] = 0.0;
+    m[1][0] = 0.0f;                   m[1][1] = 1.0f / tanHalfFOV; m[1][2] = 0.0f;                        m[1][3] = 0.0;
+    m[2][0] = 0.0f;                   m[2][1] = 0.0f;            m[2][2] = (-p.zNear - p.zFar) / zRange; m[2][3] = 2.0f * p.zFar * p.zNear / zRange;
+    m[3][0] = 0.0f;                   m[3][1] = 0.0f;            m[3][2] = 1.0f;                        m[3][3] = 0.0;
+}
+
 /*
 float RandomFloat()
 {

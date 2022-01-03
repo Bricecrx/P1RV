@@ -48,6 +48,15 @@
     <ClCompile Include="basicmesh.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="cubemap_texture.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="skyboxtechnique.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="skybox.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="math_3d.h">
@@ -95,6 +104,15 @@
     <ClInclude Include="enginecommon.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="cubemap_texture.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="skyboxtechnique.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="skybox.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shader.vs">
@@ -119,6 +137,12 @@
       <Filter>Fichiers de ressources</Filter>
     </None>
     <None Include="shader3.fs">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="skybox.vs">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="skybox.fs">
       <Filter>Fichiers de ressources</Filter>
     </None>
   </ItemGroup>

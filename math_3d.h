@@ -196,6 +196,25 @@ inline Vector4f operator/(const Vector4f& l, float f)
     return Ret;
 }
 
+struct PersProjInfo
+{
+    float FOV;
+    float Width;
+    float Height;
+    float zNear;
+    float zFar;
+};
+
+struct OrthoProjInfo
+{
+    float r;        // right
+    float l;        // left
+    float b;        // bottom
+    float t;        // top
+    float n;        // z near
+    float f;        // z far
+};
+
 
 class Matrix4f
 {
@@ -264,6 +283,8 @@ public:
     void InitCameraTransform(const Vector3f& Target, const Vector3f& Up);
     void InitCameraTransform(const Vector3f& Position, const Vector3f& Target, const Vector3f& Up);
     void InitPersProjTransform(float FOV, float Width, float Height, float zNear, float zFar);
+    void InitOrthoProjTransform(const OrthoProjInfo& p);
+    void InitPersProjTransform(const PersProjInfo& p);
     float Determinant() const;
     Matrix4f& Inverse();
 };
@@ -323,6 +344,7 @@ public:
         return n;
     }
 };
+
 
 
 
